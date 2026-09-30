@@ -1,0 +1,32 @@
+const celebrants = [{ name: 'Evelin', surname: 'Castellanos' }, { name: 'Estrella', surname: 'Gonzales' }];
+export const eventConfig = {
+  eventName: 'Nuestros XV años', celebrants, celebrant: celebrants.map(person => `${person.name} ${person.surname}`).join(' & '), initials: 'E & E', eventType: 'Nuestros XV años',
+  date: '2026-11-28', timeZone: 'America/Mexico_City', timeZoneConfirmed: true, city: 'Buenavista, Jalisco, México',
+  private: true,
+  parents: ['Mario de Jesús González Andrade', 'Karla María Castellanos Ramírez'],
+  godparents: ['Jaime Lara', 'Claudia Ochoa', 'Dilan Castellanos'],
+  ceremony: { name: 'Templo Sagrado Corazón de Jesús', title: 'Templo', subtitle: 'Sagrado Corazón de Jesús', address: '', mapsUrl: 'https://maps.app.goo.gl/RrTnqyrn5xKeTxaYA', mapEmbedUrl: 'https://www.google.com/maps?q=20.453673,-103.5219714&z=17&output=embed', time: '18:00', label: '6:00 PM', description: 'Misa' },
+  reception: { name: 'Terraza Terrazul', title: 'Terraza', subtitle: 'Terrazul', address: '', mapsUrl: 'https://maps.app.goo.gl/3yZCWZ3EEY3bUoN8A', mapEmbedUrl: 'https://www.google.com/maps?q=20.440858,-103.487105&z=17&output=embed', time: '20:00', label: '8:00 PM' },
+  colors: { burgundy: '#541E2B', wine: '#35151D', ivory: '#F4EFE6', champagne: '#C6AA78', gold: '#A98755', ink: '#171414' },
+  messages: { intro: 'Una noche para recordar', welcomeTitle: ['Una noche.', 'Todos los que amamos.'], hero: 'Hay momentos que merecen convertirse en recuerdos eternos.', welcome: 'Con inmensa alegría queremos compartir contigo un día que permanecerá para siempre en nuestros corazones.', emotional: ['Hay noches que terminan.', 'Y hay recuerdos que permanecen', 'para siempre.'], rsvp: 'Nos encantará compartir esta noche contigo.', closing: 'Gracias por ser parte de este momento' },
+  timeline: [{ time: '06:00 PM', title: 'Ceremonia religiosa', place: 'Templo Sagrado Corazón de Jesús' }, { time: '08:00 PM', title: 'Recepción', place: 'Terraza Terrazul' }],
+  dressCode: { visible: false, text: '[DRESS CODE POR DEFINIR]' },
+  music: { src: '/Dreaming of You - Selena (Sax Cover by Joe Farey).mp3', title: 'Dreaming of You — Selena (Sax Cover by Joe Farey)' },
+  cover: { src: '/fotos/a85c28aa-0705-477f-9bf6-6437574dbe81.jpg', alt: 'Evelin y Estrella juntas en sus XV años' },
+  hero: { src: '', alt: 'Retrato del festejado o festejada' },
+  gallery: { visible: true, photos: [
+    { src: '/fotos/e58b7761-a77f-4992-be72-f34bdf767250.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 887 },
+    { src: '/fotos/976cf1ed-26a3-468c-b6ad-c27052c6554d.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 926 },
+    { src: '/fotos/8d2db16d-b125-4fe7-9ba0-ddddf6e63550.jpg', alt: 'Evelin y Estrella juntas en su sesión de XV años', width: 702, height: 903 },
+    { src: '/fotos/0a417dd2-1bcf-4e8c-a72e-f33149fdb954.jpg', alt: 'Evelin y Estrella juntas en su sesión de XV años', width: 702, height: 911 },
+    { src: '/fotos/c87248b0-c3cd-484c-86a2-d50320ab9fe2.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 903 },
+    { src: '/fotos/86b0396d-32ad-46a8-a7a8-b05545504d4d.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 864 },
+    { src: '/fotos/2fa60593-af83-472d-80ed-580ed8f78662.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 862 },
+    { src: '/fotos/50c346ac-e2fa-4781-a579-460deae6d543.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 890 },
+    { src: '/fotos/b387010c-d58c-4e29-a236-6fc8c2497d7f.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 870 },
+    { src: '/fotos/d70b2fbc-1402-45db-87d6-3802a67535f6.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 897 },
+    { src: '/fotos/1ea29f37-c96a-4145-bc74-4c6bff39e2d7.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 923 },
+    { src: '/fotos/6eaf8b1e-3fa7-4403-babd-f7205620eb4c.jpg', alt: 'Evelin y Estrella juntas en su sesión de XV años', width: 702, height: 927 }
+  ] },
+  rsvp: { maxGuests: 6, enabled: true, whatsapp: true },
+};

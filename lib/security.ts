@@ -1,0 +1,6 @@
+import 'server-only';
+import { cookies } from 'next/headers';
+import { authClient } from '@/lib/supabase';
+export function validOrigin(req:Request){const origin=req.headers.get('origin');const configured=process.env.NEXT_PUBLIC_SITE_URL;const allowed=configured?[new URL(configured).origin]:process.env.NODE_ENV==='development'?['http://localhost:3000','http://127.0.0.1:3000']:[];return Boolean(origin&&allowed.includes(origin))}
+export async function isAdmin(){const token=(await cookies()).get('admin_session')?.value;if(!token)return false;try{const {data,error}=await authClient().auth.getUser(token);return !error&&!!data.user&&(process.env.ADMIN_USER_IDS||'').split(',').map(s=>s.trim()).filter(Boolean).includes(data.user.id)}catch{return false}}
+export async function smallJson(req:Request){if(Number(req.headers.get('content-length')||0)>12000)throw new Error('BODY_TOO_LARGE');const reader=req.body?.getReader();if(!reader)throw new Error('INVALID_BODY');let size=0;const chunks:Uint8Array[]=[];for(;;){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>12000){await reader.cancel();throw new Error('BODY_TOO_LARGE')}chunks.push(value)}const body=new Uint8Array(size);let offset=0;for(const c of chunks){body.set(c,offset);offset+=c.byteLength}return JSON.parse(new TextDecoder().decode(body))}

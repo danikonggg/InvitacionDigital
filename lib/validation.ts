@@ -1,0 +1,5 @@
+import { z } from 'zod';
+import { eventConfig as e } from '@/config/eventConfig';
+const clean = (s:string)=>s.normalize('NFKC').replace(/[\u0000-\u001f\u007f<>]/g,'').trim();
+export const rsvpSchema=z.object({guest_name:z.string().max(200).transform(clean).pipe(z.string().min(2,'Escribe tu nombre completo.').max(120)),attendance:z.boolean(),guest_count:z.number().int().min(0).max(e.rsvp.maxGuests),message:z.string().max(1000).transform(clean).optional().default(''),dietary_restrictions:z.string().max(500).transform(clean).optional().default(''),website:z.string().max(0).optional()}).superRefine((value,ctx)=>{if(value.attendance&&value.guest_count<1)ctx.addIssue({code:'custom',message:'Inclúyete en el número de invitados.',path:['guest_count']});if(!value.attendance&&value.guest_count!==0)ctx.addIssue({code:'custom',message:'Una respuesta negativa debe tener cero asistentes.',path:['guest_count']})});
+export const loginSchema=z.object({email:z.email().max(254),password:z.string().min(1).max(200)});

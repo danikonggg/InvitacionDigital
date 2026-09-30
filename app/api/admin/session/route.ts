@@ -1,0 +1,6 @@
+import { cookies } from 'next/headers';
+import { authClient } from '@/lib/supabase';
+import { validOrigin,smallJson } from '@/lib/security';
+import { loginSchema } from '@/lib/validation';
+export async function POST(req:Request){if(!validOrigin(req))return Response.json({error:'Solicitud no permitida.'},{status:403});try{const body=loginSchema.safeParse(await smallJson(req));if(!body.success)return Response.json({error:'Revisa tu correo y contraseña.'},{status:400});const {data,error}=await authClient().auth.signInWithPassword(body.data);const allowed=(process.env.ADMIN_USER_IDS||'').split(',').map(v=>v.trim()).filter(Boolean);if(error||!data.user||!data.session||!allowed.includes(data.user.id))return Response.json({error:'No fue posible iniciar sesión.'},{status:401});(await cookies()).set('admin_session',data.session.access_token,{httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:'strict',path:'/',maxAge:data.session.expires_in});return Response.json({ok:true})}catch{return Response.json({error:'El acceso privado no está configurado o no está disponible.'},{status:503})}}
+export async function DELETE(req:Request){if(!validOrigin(req))return Response.json({error:'Solicitud no permitida.'},{status:403});(await cookies()).delete('admin_session');return Response.json({ok:true})}

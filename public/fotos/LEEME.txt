@@ -1,0 +1,3 @@
+Las 13 fotos están conectadas desde config/eventConfig.ts.
+Portada: a85c28aa-0705-477f-9bf6-6437574dbe81.jpg (las dos juntas).
+Las otras 12 están ordenadas en gallery.photos. Conserva los nombres de los archivos.
