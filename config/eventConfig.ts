@@ -1,4 +1,4 @@
-const celebrants = [{ name: 'Evelyn', surname: 'Castellanos' }, { name: 'Estrella', surname: 'Gonzales' }];
+const celebrants = [{ name: 'Evelin', surname: 'Castellanos' }, { name: 'Estrella', surname: 'Gonzales' }];
 export const eventConfig = {
   eventName: 'Nuestros XV años', celebrants, celebrant: celebrants.map(person => person.name).join(' & '), initials: 'E & E', eventType: 'Nuestros XV años',
   date: '2026-11-28', timeZone: 'America/Mexico_City', timeZoneConfirmed: true, city: 'Buenavista, Jalisco, México',
