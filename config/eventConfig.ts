@@ -28,5 +28,5 @@ export const eventConfig = {
     { src: '/fotos/1ea29f37-c96a-4145-bc74-4c6bff39e2d7.jpg', alt: 'Retrato de la sesión de XV años con vestido borgoña y corona', width: 702, height: 923 },
     { src: '/fotos/6eaf8b1e-3fa7-4403-babd-f7205620eb4c.jpg', alt: 'Evelin y Estrella juntas en su sesión de XV años', width: 702, height: 927 }
   ] },
-  rsvp: { whatsappNumber: '523332426402', maxGuests: 6, enabled: true, whatsapp: true },
+  rsvp: { whatsappNumber: '523330088257', maxGuests: 6, enabled: true, whatsapp: true },
 };
