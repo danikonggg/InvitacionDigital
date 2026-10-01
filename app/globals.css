@@ -59,3 +59,5 @@
 .developer-credit{margin:22px 0 0;font-size:10px;letter-spacing:.09em;color:#ad8e7c;line-height:1.8}.developer-credit span{color:var(--champagne)}
 
 .dress-code{padding:65px 26px 80px;text-align:center;border-top:1px solid #a9875530}.dress-code-star{display:block;color:var(--gold);font-size:35px;margin-bottom:24px}.dress-code h2{margin-top:18px}.dress-code p{max-width:430px;margin:auto;font-size:15px;color:#80665b;line-height:1.9}@media(max-width:700px){.dress-code{padding:50px 26px 60px}}
+
+.dress-code-icons{display:flex;justify-content:center;align-items:center;gap:25px;color:var(--gold);margin:0 auto 28px}.dress-code-icons svg{width:64px;height:80px}.dress-code-icons>span{font-size:19px;opacity:.7}@media(max-width:700px){.dress-code-icons{gap:22px}.dress-code-icons svg{width:56px;height:70px}}
