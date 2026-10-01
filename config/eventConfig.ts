@@ -10,7 +10,7 @@ export const eventConfig = {
   colors: { burgundy: '#541E2B', wine: '#35151D', ivory: '#F4EFE6', champagne: '#C6AA78', gold: '#A98755', ink: '#171414' },
   messages: { intro: 'Una noche para recordar', welcomeTitle: ['Una noche.', 'Todos los que amamos.'], hero: 'Hay momentos que merecen convertirse en recuerdos eternos.', welcome: 'Con inmensa alegría queremos compartir contigo un día que permanecerá para siempre en nuestros corazones.', emotional: ['Hay noches que terminan.', 'Y hay recuerdos que permanecen', 'para siempre.'], rsvp: 'Nos encantará compartir esta noche contigo.', closing: 'Gracias por ser parte de este momento' },
   timeline: [{ time: '06:00 PM', title: 'Ceremonia religiosa', place: 'Templo Sagrado Corazón de Jesús' }, { time: '08:00 PM', title: 'Recepción', place: 'Terraza Terrazul' }],
-  dressCode: { visible: false, text: '[DRESS CODE POR DEFINIR]' },
+  dressCode: { visible: true, text: 'Formal', note: 'Te pedimos evitar los colores beige, rojo, champagne y dorado.' },
   music: { src: '/Dreaming of You - Selena (Sax Cover by Joe Farey).mp3', title: 'Dreaming of You — Selena (Sax Cover by Joe Farey)' },
   cover: { src: '/fotos/a85c28aa-0705-477f-9bf6-6437574dbe81.jpg', alt: 'Evelin y Estrella juntas en sus XV años' },
   hero: { src: '', alt: 'Retrato del festejado o festejada' },
